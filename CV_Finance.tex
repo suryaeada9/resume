@@ -1,0 +1,182 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Surya Teja Eada 
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Data}
+
+\begin{tabular}{rl}
+    \textsc{Place and Date of Birth:} & Andhra Pradesh, India  | 23 August 1992 \\
+    \textsc{Address:}   & 108, Foster Drive, Willimantic, Connecticut - 06226 \\
+    \textsc{Phone:}     & +1 860-208-7249\\
+    \textsc{email:}     & \href{mailto:teja.suryateja.surya@gmail.com}{teja.suryateja.surya@gmail.com}
+\end{tabular}
+
+%Section: Education
+\section{Education}
+\begin{tabular}{rl}	
+ \textsc{Current}  & Master's in \textsc{Applied Financial Mathematics}, (Graduation: May 2019) \\
+ & \textsc{and, TEACHING ASSISTANT for Calculus 2 Undergraduate Course} \\
+ & \textsc{Department of Mathematics}, \textbf{University of Connecticut} \\
+&\normalsize \textsc{GPA}: A \\&\\
+ \textsc{May} 2014 & Master of \textsc{Statistics}, \textbf{Indian Statistical Institute}, Kolkata\\
+ & (Actuarial Specialization) \\
+&\normalsize \textsc{Percentage}: 62.7 \\&\\
+\textsc{May} 2012 & Bachelor of \textsc{Statistics} (\textbf{Hons.}), \textbf{Indian Statistical Institute}, Kolkata\\ 
+&\normalsize \textsc{Percentage}: 62.3 \\&\\
+
+\end{tabular}
+
+%Section: Work Experience at the top
+\section{Work Experience}
+\begin{tabular}{r|p{11cm}}
+ \emph{May 2017} & Senior Research Analyst at \textsc{CRISIL Global Research and Analytics}, \\\textsc{July 2014}&Pune \\&\emph{Consultant Model Validation for Risk related Banking models}\\&\footnotesize{As a credit risk model validator, I have used statistics in the field of Financial Risk Management. My work predominantly involved validation of credit risk models. I have extensive experience, having worked with Probability of Default (Logistic Regression), Loss Given Default (Fractional Logistic), Operational Loss Forecasting (Distribution Fitting and Monte Carlo Simulations), Automated Valuation Models' Performance Assessment Model (Wilcoxon Sign Rank and MAE based ranking model), Economic Capital Models (Simulation Based Vendor Model). I also have exposure working with  counterparts at one of the leading banks in the United States of America.}\\\multicolumn{2}{c}{} \\
+ \textsc{Summer 2013} & Summer Internship at \textsc{Deloitte Touche Tohmatsu India LLP.}, \\ & Hyderabad \\&\emph{Advanced Analytics and Modeling}\\&\footnotesize{I have developed a supervised learning decision tree (CHAID) model to deduce significant categorical factors that impacts purchase of a particular electronic good. The model was built for the purpose of obtaining prospective target population based on the significant characteristics such as Age, purchase behavior in different locations.}\\\multicolumn{2}{c}{} \\
+\textsc{Summer 2012} & Summer Intern at \textsc{eClerx}, Mumbai \emph{}\\&\footnotesize{I created training presentations on statistical techniques such as linear regression and clustering.}
+\end{tabular}
+
+%Section: Projects
+\section{Projects}
+\begin{tabular}{r|p{11cm}}
+ \Large{CRISIL} 
+  & \textbf{Probability of Default Modeling for Auto New and Auto Used Portfolio} \\ &\footnotesize{I have independently modelled Probability of customer's default from Auto New and Auto Used portfolios using similar approach (logistic regression) taken by model development team thereby diagnosing for any inappropriate assumptions, inaccuracy. I further conducted residual diagnostics relevant for assumptions of logistic regression such as multi-collinearity, and independence. Further, I have evaluated model's performance using measures such as Gini's table, KS measure, Somer's D measure, ranking order in bins, sensitivity analysis and comparison of actual with predicted. }\\\multicolumn{2}{c}{} \\
+ 
+& \textbf{Wholesale Portfolio CCAR Loss Given Default Model} \\ &\footnotesize{I have independently modelled Loss given default (a fractional outcome) using similar approach (fractional logistic regression) taken by model development team also including macro-economic variables that allows for evaluation of Loss given default under stressed macro-economic scenarios. Apart from the usual diagnostic procedures such as back-testing, benchmarking, I also evaluated many potential model approaches for LGD such as inflated boundary beta distribution, simplex, tobit, and NLS model with the help of "\textbf{Modeling Fractional Outcomes with SAS, Wensui Liu, Jason Xin, 1304-2014}". I have evaluated the performance of each model based on Mean Absolute Error, Variance of Error and inferred that fractional logistic and inflated beta provide better modelling for fractional outcomes such as LGD. }\\\multicolumn{2}{c}{} \\
+
+& \textbf{Fair Market Value - Credit Value Adjustment(CVA)} \\ &\footnotesize{For counter-party credit risk, it is necessary to predict future Exposure at Default using Mark to Market concept to obtain credit value adjustment which results in the fair market value of the derivative. I have diagnosed the calculation based model and identified findings with respect to netting set definition, and positive exposure definition in the calculation of Expected positive exposures which had an impact on the CVA calculations.  }\\\multicolumn{2}{c}{} \\
+
+& \textbf{Operational Risk Model - Loss Distribution Approach } \\ &\footnotesize{While validating the operational risk model, I have independently modelled the number of defaults in a quarter using poisson and negative binomial and loss amount given default using mixture of GPD and log normal distribution and evaluating the loss using 99 percentile of the simulated loss distribution. During this model validation, my contributions were valuable because I have indicated developer's inappropriate use of Poisson (specially single parameter distribution) for distributions with hugely different mean and variance, therefore under-estimating the number of losses corresponding to that particular event type. I have also indicated inappropriate simulation technique being used for obtaining mixture distribution.} \\\multicolumn{2}{c}{} \\ 
+
+&\textbf{Miscellaneous Models and Projects} \\ & \footnotesize{I have worked on validations of Automated Valuation performance assessment model, Merton-based transition PD model, Credit Risk Economic Capital model, Line of Credit's Limit Increase Insight model, and Collection Recovery model during the tenure at CRISIL. Further, for self learning, I have worked on simulations of bi-variate and multi-variate normal distributions, copulas, and simulation of losses using roll rate models, simulation of returns that follows Geometric Brownian Motion (GBM). } \\\multicolumn{2}{c}{} \\  
+
+\Large{Academic} 
+& \textbf{Impact of pollution on fish growth} \\ &\footnotesize{Analyzed the impact pollution has on growth of fishes. Data was collected from a controlled experiment on a similar kind of fish placed in a pool with hoop nets preventing fish to move from one side of the pool to the other. One side of the pool was adjoined by the road hence prone to pollution unlike the other three sides. Length of the fishes every week were obtained from all sides of the pool. I analyzed the effect of road on the length of the fishes by regressing the given weekly length of the fishes on length in the previous week, covariates such as temperature and dissolved oxygen and the dummy representing the effect of road. I found that the dummy was insignifcant implying that there is no fixed effect due to the pollution apart from the effect induced through change in temperature and dissolved oxygen. I have similarly extended the analysis using the growth curves (length as a function of time) to observe that the growth curves for fishes from all sides of the pools were similar. }\\\multicolumn{2}{c}{} \\
+
+\end{tabular}
+
+
+%Section: Scholarships and additional info
+\section{Scholarships and Certificates}
+\begin{tabular}{rl}
+ 2009 - 2014 & INSPIRE Scholarship for graduate students with outstanding ability \footnotesize( Rs. 80,000/Year)\normalsize\\
+\textsc{Sept} 2015 & {\textsc{GRE}\textregistered}\setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}: 320/340 (\textsc{quantitative:168 (95\textsuperscript{th} percentile) ; verbal :152 (54\textsuperscript{th} percentile) ;} \\ & \textsc{Analytical Writing: 4.0 ( 56\textsuperscript{th} percentile)} \\
+\textsc{July} 2016 &
+{\textsc{TOEFL}\textregistered}\setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}: 107/120 (\textsc{Reading: 27/30 ; Listening: 30/30 ; Speaking: 27/30 ; Writing: 23/30 }
+\end{tabular}
+
+
+
+%Section: Awards and Recognition
+\section{Awards and Recognition}
+\begin{tabular}{rl}
+\Large{CRISIL GRA} \\ \\
+
+Q1 2015 & Won Individual Bright Spark Quarterly Award at CRISIL \normalsize\\
+Q2 2015 & Won Executive Excellence Quarterly Team Award \\
+November 2015 & Won Monthly CLAP Award for outstanding performance \\
+December 2015 & Won Monthly CLAP Award for outstanding performance \\
+Q4 2015 & Nominated for Service Excellence Quarterly Award for extensive model validation \\ & Lot of additional hours spent for efficient validation work during CCAR submissions \\
+Q2 2016 &Won Analytical Excellence Quarterly Award for additional analysis. \\ & Analysis was appreciated by client on basis of monetary and time efficiency impact.\\
+
+\end{tabular}
+
+
+%Section: Languages
+\section{Languages}
+\begin{tabular}{rl}
+ \textsc{Telugu:}&Mother tongue\\
+\textsc{English:}&Fluent\\
+\textsc{Hindi:}&Fluent\\
+\textsc{Bengali:}&Basic Knowledge \\
+\end{tabular}
+
+\section{Computer Skills}
+\begin{tabular}{rl}
+ Good Knowledge:& \textsc{SAS}, \textsc{R} , \textsc{C},  \textsc{MATLAB}, my\textsc{sql}, and \textsc{MS Office} \setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}\\
+
+Basic Knowledge:& \textsc{vba}, \textsc{Python}, and \textsc{Latex}\\
+\end{tabular}
+
+\section{Interests and Activities}
+Statistical Inferences, Probability Theory, Game Theory, Simulations\\
+Programming, Mathematical Puzzles\\
+Badminton, Table Tennis, Travelling
+
+
+
+%\newpage
+%\hypertarget{gmat}{\textsc{Gmat}\setmainfont{LMRoman10 Regular}\textregistered\setmainfont[SmallCapsFont=Fontin-SmallCaps]{Fontin-Regular}}
+
+%\XeTeXpdffile ''GMAT.pdf'' page 1 scaled 800
+
+\end{document}

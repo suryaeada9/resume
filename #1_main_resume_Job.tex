@@ -1,0 +1,163 @@
+%-------------------------
+% Resume in Latex
+% Author : Surya Teja Eada
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Surya Teja Eada} & Email : \href{mailto:surya.eada@uconn.edu}{surya.eada@uconn.edu}\\
+   & Mobile : +1-860-771-8215 \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Connecticut}{Storrs, CT}
+      {Ph.D. in Statistics;  GPA: 4.2}{Aug. 2019 -- Present}
+    \resumeSubheading
+      {University of Connecticut}{Storrs, CT}
+      {Master of Science in Applied Financial Mathematics;  GPA: 4.055}{Aug. 2017 -- May. 2019}
+    \resumeSubheading
+      {Indian Statistical Institute}{Kolkata, India}
+      {Master of Statistics;  Percent: 62 }{July. 2012 -- May. 2014}
+    \resumeSubheading
+      {Indian Statistical Institute}{Kolkata, India}
+      {Bachelor of Statistics;  Percent: 62 }{July. 2009 -- May. 2012}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Connecticut}{Storrs, CT}
+      {Teaching Assistant, Dept. of Statistics and Dept. of Mathematics}{Aug. 2017 - Present}
+     
+      \resumeItemListStart
+      \resumeItem{Research Experience}
+        {With the help of my advisor and my course professor who acted as my mentors from the Statistics department, I am working on a project that involves estimation of parameters in a "Brownian Motion driven by Telegraph Process" model. The model is being investigated for applications to Finance like data as they often have stochastic process that changes drift and volatility for different underlying states.}
+        
+      \resumeItem{Teaching Experience}
+        {I have attained 6 semesters of teaching experience in different roles such as discussion leader, online course TA, primary instructor for courses in departments of statistics and mathematics. I believe that this helped me achieve a diverse experience in finding multiple ways of projecting ideas.}
+        
+      \resumeItem{Industry Experience - Travelers}
+        {During the third semester in UConn, I took up the "Experiential Learning Collaborative" course in School of Business. This allowed me to work with Travelers in a project that analyzed distribution channels of Travelers auto insurance and gave various inputs.}
+        
+      \resumeItemListEnd
+      
+      
+    \resumeSubheading
+      {CRISIL}{Pune, India}
+      {Senior Quantitative Analyst}{July 2014 - May 2017}
+      
+      \resumeItemListStart
+        \resumeItem{Validation of Fractional outcome and dichotomous outcome models}
+          {At CRISIL, I have worked as an outsourcing consultant doing validation work for a US commercial bank. During this time, I have independently modelled dichotomous outcomes for Probability of customer's default using logistic regression and further diagnosed and validated existing models. I have similarly also modeled fractional outcomes such as Loss given default based off reviewing ""\textbf{Modeling Fractional Outcomes with SAS, Wensui Liu, Jason Xin, 1304-2014}". I have also worked as a mentor to some colleagues who worked at CRISIL on the same project.}
+        
+        \resumeItem{Distribution Fitting and Monte Carlo Simulations}
+          {During validation of an Operation Risk Model, I have independently modelled the number of defaults in a quarter using poisson and negative binomial and loss amount given default using mixture of GPD and log normal distribution and evaluated the loss using 99 percentile of the simulated loss distribution. During this model validation, my contributions were valuable because I have indicated developer's inappropriate use of Poisson (specially single parameter distribution) for distributions with hugely different mean and variance, therefore under-estimating the number of losses corresponding to that particular event type. I have also indicated inappropriate simulation technique being used for obtaining mixture distribution. }
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Skills}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Internships}
+      {2 months at Deloitte U.S. India Ltd. Advanced Analytics team, Hyderabad, India, 2 months at eClerx, Mumbai, India}
+    \resumeSubItem{Statistical Knowledge}
+      {Parameter Estimation, Hypothesis Testing, Linear Regression, Generalized Linear Regression, ANOVA, Clustering Techniques, Decision Trees.}
+    \resumeSubItem{Computer Knowledge}
+      {SAS, R, R-Markdown, LATEX, Github, HPC Cluster, C.}
+    \resumeSubItem{Finance and Others}
+      {Finance Modeling of Risk, Actuarial Modeling, CAPM model, Interest rate models, Black-Scholes Option pricing model}
+    \resumeSubItem{Social Skills}
+      {University of Connecticut's Badminton Club team member, Secretary of Tarang (Student Orgranization) at UConn, Sports Committee secretary at ISI, CRISIL's voluntary organization \textit{Plastic Awareness for Environment and Society} (PAES) member}      
+  \resumeSubHeadingListEnd
+
+%
+%--------PROGRAMMING SKILLS------------
+%\section{Programming Skills}
+%  \resumeSubHeadingListStart
+%    \item{
+%      \textbf{Languages}{: Scala, Python, Javascript, C++, SQL, Java}
+%      \hfill
+%      \textbf{Technologies}{: AWS, Play, React, Kafka, GCE}
+%    }
+%  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}

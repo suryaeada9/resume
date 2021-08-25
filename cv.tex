@@ -1,0 +1,122 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Surya Teja Eada 
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Data}
+
+\begin{tabular}{rl}
+    \textsc{Place and Date of Birth:} & Andhra Pradesh, India  | 23 August 1992 \\
+    \textsc{Current Address:}   & 118, Foster Drive, Willimantic, CT - 06226 \\
+    \textsc{Phone:}     & +1 (860)-208-7249\\
+    \textsc{email:}     & \href{mailto:surya.eada@uconn.edu}{surya.eada@uconn.edu}
+\end{tabular}
+
+%Section: Education
+\section{Education}
+\begin{tabular}{r|p{11cm}}
+
+\textsc{Current}  & Master's in \textsc{Applied Financial Mathematics},\\ & Teaching Assistant at Department of Mathematics \\ & \textbf{University of Connecticut}, Storrs\\
+&\normalsize \textsc{GPA}: 4.09 \\ \\
+& \textbf{Modeling a continuous time Up-Down Process using HMM} \\ &\footnotesize{Working on a project that involves estimation of parameters of an Up-Down process that changes between an upward mean moving process to a downward mean moving process with exponentially distributed holding time intervals. It is a slightly different variant of the Arithmetic Brownian Motion.  }\\\multicolumn{2}{c}{} \\
+
+ \textsc{May} 2014 & Master of \textsc{Statistics}, \textbf{Indian Statistical Institute}, Kolkata\\
+ & (Actuarial Specialization) \\
+&\normalsize \textsc{Percentage}: 62.7\\&\\
+
+\textsc{May} 2012 & Bachelor of \textsc{Statistics} (\textbf{Hons.}), \textbf{Indian Statistical Institute}, Kolkata\\ 
+&\normalsize \textsc{Percentage}: 62.3\\&\\
+
+\end{tabular}
+
+
+%Section: Work Experience at the top
+\section{Work Experience}
+\begin{tabular}{r|p{11cm}}
+ \emph{May 2017} & Senior Research Analyst at \textsc{CRISIL Global Research and Analytics}, \\\textsc{July 2014}&Pune \\&\emph{Consultant Model Validation for Risk related Banking models}\\&\footnotesize{As a credit risk model validator for a U.S. Bank, I used statistical techniques in the field of Financial Risk Management. My work predominantly involved validation of credit risk models on the SAS platform. I have delivered projects involving models such as Probability of Default, Loss Given Default, Operational Loss Forecasting, Automated Valuation Models' Performance Assessment Model.}\\\multicolumn{2}{c}{} \\
+ \textsc{Summer 2013} & Summer Internship at \textsc{Deloitte Touche Tohmatsu India LLP.}, \\ & Hyderabad \\&\emph{Advanced Analytics and Modeling}\\&\footnotesize{I have worked on supervised learning decision tree (CHAID) model to deduce significant categorical factors such as age, purchase behavior, that impacts purchase of a particular electronic good.}\\\multicolumn{2}{c}{} \\
+\textsc{Summer 2012} & Summer Intern at \textsc{eClerx}, Mumbai \emph{}\\&\footnotesize{I created training presentations on statistical techniques such as linear regression and clustering.}
+\end{tabular}
+
+\section{Computer Skills}
+\begin{tabular}{rl}
+ Good Knowledge:& \textsc{SAS}, \textsc{R} , \textsc{Latex} \textsc{C},  \textsc{MATLAB}, my\textsc{sql}, and \textsc{MS Office} \setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}\\
+\end{tabular}
+
+
+%\newpage
+%\hypertarget{gmat}{\textsc{Gmat}\setmainfont{LMRoman10 Regular}\textregistered\setmainfont[SmallCapsFont=Fontin-SmallCaps]{Fontin-Regular}}
+
+%\XeTeXpdffile ''GMAT.pdf'' page 1 scaled 800
+
+\end{document}
