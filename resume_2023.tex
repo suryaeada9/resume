@@ -1,0 +1,143 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{fontawesome}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Surya Teja Eada} & Email : \href{mailto:surya.eada@uconn.edu}{surya.eada@uconn.edu}\\
+Department of Statistics   & Mobile : +1 (860) 771-8215 \\
+University of Connecticut & \href{https://github.com/suryaeada9}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {suryaeada9}} \\
+& \href{https://www.linkedin.com/in/suryaeada9}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {Surya Teja Eada}}
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Connecticut}{Storrs, CT}
+      {Ph.D. in Statistics;  GPA: 4.09}{Aug. 2019 -- Present}
+    \resumeSubheading
+      {University of Connecticut}{Storrs, CT}
+      {Master of Science in Applied Financial Mathematics;  GPA: 4.05}{Aug. 2017 -- May. 2019}
+    \resumeSubheading
+      {Indian Statistical Institute}{Kolkata, India}
+      {Master of Statistics;  Percentage: 62 }{July. 2012 -- May. 2014}
+    \resumeSubheading
+      {Indian Statistical Institute}{Kolkata, India}
+      {Bachelor of Statistics;  Percentage: 62 }{July. 2009 -- May. 2012}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Connecticut}{Storrs, CT}
+      {Teaching Assistant, Dept. of Statistics and Dept. of Mathematics}{Aug. 2017 - Present}
+     
+      \resumeItemListStart
+      \resumeItem{Research Experience}
+        {Under guidance of my advisors,I am working on a continuous state space process, namely Brownian Processes governed by two states of telegraphers process. The aim of our work is to achieve parameter estimation when only increments in space are observed. During applications in Finance, we found that Brownian process driven by Telegraph Process is comparable to popular GARCH proceses when data is observed regularly. The model has an added advantage of obtaining parameter estimates even when data is observed irregularly. The work is submitted and is under review. During a semester, I worked on projects analyzing distribution channels of Traveler's auto insurance and giving valuable recommendations. }
+        
+      \resumeItem{Teaching Experience}
+        {Throughout my academic journey, I have accumulated a wealth of teaching experience spanning 12 semesters. These roles have included serving as a discussion leader, an online course teaching assistant, and even as the primary instructor for multiple different courses in both statistics and mathematics departments.This opportunity has been instrumental in honing my ability to present ideas effectively and also adapt my teaching methods to suit the needs and learning styles of different students. As a result, I believe I have developed a multifaceted approach to conveying complex concepts.}
+        
+      \resumeItemListEnd
+            
+    \resumeSubheading
+      {CRISIL}{Pune, India}
+      {Senior Quantitative Analyst}{July 2014 - May 2017}
+      
+      \resumeItemListStart
+        \resumeItem{Credit Risk Modeling}
+          {During my tenure as an outsourcing consultant for a US commercial bank, I undertook validation tasks independently, focusing on modeling dichotomous outcomes for the Probability of customer default using logistic regression. Furthermore, I successfully tackled the modeling of fractional outcomes, specifically the Loss Given Default.In addition to my technical contributions, I was also given a mentoring role which I did exceedingly well. }
+        
+        \resumeItem{Operation Risk Models, House pricing models}
+          {My contributions during model validation of operation risk models proved invaluable as I identified instances where the developers inappropriately employed Poisson distribution, for situations with significantly different mean and variance. This misapplication resulted in an underestimation of the number of losses corresponding to specific event types. Similarly, I provided valuable feedback that led to reducing client spending on house pricing models which was recognized, awarding me with certificates of appreciation.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Skills}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Internships}
+      {2 months at Institute for Mathematical and Statistical Innovation (IMSI), 2 months at Deloitte U.S. India Ltd.  (Advanced Analytics team),  2 months at eClerx.}
+    \resumeSubItem{Statistics Areas of Interest}
+      {Time Series, Parameter Estimation, Hypothesis Testing, Regression \& ANOVA analysis, Clustering and Classification problems.}
+    \resumeSubItem{Technology}
+      {R, Python, SAS, Markdown, Tex, Github, HPC Cluster.}
+    \resumeSubItem{Finance and Others}
+      {Risk Modeling, Actuarial Models, CAPM model, yield curve modeling, Black-Scholes model}
+    \resumeSubItem{Social}
+      {Badminton Club member, Graduate Statistics Committee member,  Secretary and President of Tarang (Student Orgranization) at UConn,  member at CRISIL's voluntary activity {\bf Plastic Awareness for Environment and Society}}      
+  \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
